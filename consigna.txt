@@ -1,0 +1,16 @@
+**Ejercicio: Gestión de Tareas**
+Crea un programa para gestionar una lista de tareas. El programa debe permitir agregar nuevas tareas, marcar tareas como completadas y listar las tareas pendientes y completadas.
+
+1. Crea dos arrays vacíos llamados **`tareasPendientes`** y **`tareasCompletadas`**.
+2. Utiliza un ciclo **`while`** para mostrar un menú al usuario con las siguientes opciones:
+a) Agregar nueva tarea
+b) Marcar tarea como completada
+c) Listar tareas pendientes
+d) Listar tareas completadas
+e) Salir del programa
+3. Dependiendo de la opción seleccionada por el usuario, realiza las siguientes acciones:
+    - Para la opción "Agregar nueva tarea": pide al usuario que ingrese el nombre de la tarea y utiliza el método **`push`** para agregarla al array **`tareasPendientes`**.
+    - Para la opción "Marcar tarea como completada": muestra al usuario la lista de tareas pendientes y permite que seleccione una tarea para marcar como completada. Utiliza el método **`splice`** para mover la tarea del array **`tareasPendientes`** al array **`tareasCompletadas`**.
+    - Para la opción "Listar tareas pendientes": utiliza un ciclo **`for`** para recorrer el array **`tareasPendientes`** y muestra las tareas pendientes una por una.
+    - Para la opción "Listar tareas completadas": utiliza un ciclo **`for`** para recorrer el array **`tareasCompletadas`** y muestra las tareas completadas una por una.
+4. Repite el ciclo hasta que el usuario seleccione la opción de salir.

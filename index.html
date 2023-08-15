@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Metadatos -->
+    <meta charset="utf-8">
+    <meta name="author" content="Sebastián Gallego">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Titulo -->
+    <title>Gention de Tareas | Sebastian Gallego</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="js.ico">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!-- Iconos de Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <!-- CSS -->
+    <link href="style.css" rel="stylesheet">
+    <!-- Google Fonts -->
+
+    <!-- JS -->
+    <script defer src="index.js"></script>
+
+</head>
+
+<body>
+
+    <main class="tituloContainer container-fluid d-flex mt-5 flex-column align-items-center">
+
+        <div class="container-fluid d-flex justify-content-center align-items-center">
+            <img src="js.png" alt="Logo Java Script" class="logo  ">
+            <h1 class="titulo text-center m-3">Ejercicios con JavaScript</h1>
+
+        </div>
+
+        <div class="container-fluid d-flex mt-5 justify-content-center ">
+            <h1 class="titulo text-center ">Gestión de Tareas</h1>
+
+        </div>
+
+
+        <button type="button" onclick=ejecutarTareas() class="btn btn-primary mt-5" id="abrirVersion1">
+            Ejecutar
+        </button>
+
+
+
+    </main>
+
+
+    <section class="enunciado mt-5 container-fluid flex-column">
+        <h2 class="texto">
+            **Ejercicio: Gestión de Tareas**
+            <br>
+            Crea un programa para gestionar una lista de tareas.
+            <br>
+            <br>
+            El programa debe permitir agregar nuevas tareas, marcar tareas como completadas y listar las tareas
+            pendientes y completadas.
+            <br>
+            1. Crea dos arrays vacíos llamados **`tareasPendientes`** y **`tareasCompletadas`**.
+            <br>
+            <br>
+            2. Utiliza un ciclo **`while`** para mostrar un menú al usuario con las siguientes opciones:
+            <br>
+            a - Agregar nueva tarea
+            <br>
+            b - Marcar tarea como completada
+            <br>
+            c - Listar tareas pendientes
+            <br>
+            d - Listar tareas completadas
+            <br>
+            e - Salir del programa
+            <br>
+            <br>
+            3. Dependiendo de la opción seleccionada por el usuario, realiza las siguientes acciones:
+            <br>
+            - Para la opción "Agregar nueva tarea": pide al usuario que ingrese el nombre de la tarea y utiliza el
+            método **`push`** para agregarla al array **`tareasPendientes`**.
+            <br>
+            - Para la opción "Marcar tarea como completada": muestra al usuario la lista de tareas pendientes y permite
+            que seleccione una tarea para marcar como completada. Utiliza el método **`splice`** para mover la tarea del
+            array **`tareasPendientes`** al array **`tareasCompletadas`**.
+            <br>
+            - Para la opción "Listar tareas pendientes": utiliza un ciclo **`for`** para recorrer el array
+            **`tareasPendientes`** y muestra las tareas pendientes una por una.
+            <br>
+            - Para la opción "Listar tareas completadas": utiliza un ciclo **`for`** para recorrer el array
+            **`tareasCompletadas`** y muestra las tareas completadas una por una.
+            <br>
+            <br>
+            4. Repite el ciclo hasta que el usuario seleccione la opción de salir.
+
+        </h2>
+
+    </section>
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
