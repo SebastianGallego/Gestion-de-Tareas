@@ -3,7 +3,7 @@ let tareasCompletadas = [];
 let menuIngresado ; 
 
 
-function ejecutarTareas() {
+//function ejecutarTareas() {
 
   mostrarMenu();  
   menuIngresado =  prompt("ingrese una opción de Menú").toLowerCase(); 
@@ -11,12 +11,32 @@ function ejecutarTareas() {
 
   while (menuIngresado != "e") {  
      
-    console.clear();
+    
     mostrarMenu();  
     menuIngresado = prompt("ingrese una opción de Menú").toLowerCase(); 
     
+    if (menuIngresado == "a") {
+      fncNuevaTarea();
+    
     }
 
+    if (menuIngresado == "b") {
+
+      fncTareaCompletada();
+    }
+
+    if (menuIngresado == "c") {
+
+      fncTareaPendientes();
+    }
+
+    if (menuIngresado == "d") {
+
+      fncTareaCompletas();
+    }
+
+
+  //}
 
     
 }
@@ -34,4 +54,29 @@ function mostrarMenu() {
 
       
 
-   
+  function fncNuevaTarea() {
+    const tarea = prompt("Agregue nueva tarea: ");
+
+    tareasPendientes.push(tarea); 
+    console.log('Tarea agregada.');
+
+
+  }
+
+
+  function fncTareaCompletada() {
+
+    
+  }
+
+
+  function fncTareaPendientes() {
+
+    
+  }
+
+
+  function fncTareaCompletas() {
+
+    
+  }
