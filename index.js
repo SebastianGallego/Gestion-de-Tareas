@@ -1,42 +1,24 @@
 let tareasPendientes = [];
 let tareasCompletadas = [];
-let menuIngresado ; 
+let menuIngresado = "inicio"; 
 
 
-//function ejecutarTareas() {
+function ejecutarTareas() {
 
-  mostrarMenu();  
-  menuIngresado =  prompt("ingrese una opción de Menú").toLowerCase(); 
  
-
   while (menuIngresado != "e") {  
-     
     
     mostrarMenu();  
     menuIngresado = prompt("ingrese una opción de Menú").toLowerCase(); 
     
-    if (menuIngresado == "a") {
-      fncNuevaTarea();
+    if (menuIngresado == "a") fncNuevaTarea(); 
+
+    if (menuIngresado == "b") fncTareaCompletada(); 
     
-    }
+    if (menuIngresado == "c") fncTareaPendientes(); 
 
-    if (menuIngresado == "b") {
-
-      fncTareaCompletada();
-    }
-
-    if (menuIngresado == "c") {
-
-      fncTareaPendientes();
-    }
-
-    if (menuIngresado == "d") {
-
-      fncTareaCompletas();
-    }
-
-
-  //}
+    if (menuIngresado == "d") fncTareaCompletas();  
+  }
 
     
 }
@@ -58,6 +40,7 @@ function mostrarMenu() {
     const tarea = prompt("Agregue nueva tarea: ");
 
     tareasPendientes.push(tarea); 
+    console.clear();
     console.log('Tarea agregada.');
 
 
@@ -65,18 +48,52 @@ function mostrarMenu() {
 
 
   function fncTareaCompletada() {
-
+      
+      console.clear();
+      console.log(tareasPendientes);
+      const tarea = prompt("Ingrese la tarea completada: ");
     
+
+
   }
 
 
   function fncTareaPendientes() {
-
+    console.clear();
+    
+    
+    if (tareasPendientes.length <= 0) {
+      console.log("No hay Tareas Pendientes");
+    }
+    else {
+        console.log("Tareas Pendientes");
+        for (let i = 0; i < tareasPendientes.length; i++) {
+          console.log(tareasPendientes[i]); 
+        
+        }
+    }
     
   }
 
 
+  
   function fncTareaCompletas() {
-
+    
+    console.clear();
+    if (tareasCompletadas.length <= 0) {
+      console.log("No hay Tareas Completadas");
+    }
+    else {
+        console.log("Tareas Completadas");
+        for (let i = 0; i < tareasCompletadas.length; i++) {
+          console.log(tareasCompletadas[i]); 
+        
+        }
+    }
     
   }
+
+
+  document.addEventListener('DOMContentLoaded', function () {
+    ejecutarTareas();
+  });
